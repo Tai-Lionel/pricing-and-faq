@@ -1,0 +1,176 @@
+/* nav bar & footer */
+::selection {
+  background: var(--bs-primary);
+  color: white;
+}
+
+.super-sm-text {
+  font-size: 6px;
+}
+
+.sm-text {
+  font-size: 14px;
+}
+
+.link-light:hover {
+  color: var(--bs-primary) !important;
+}
+
+.navbar-scroll-effect {
+  background-color: rgba(26, 26, 26, 0.8);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+  transition: all 200ms ease-in-out;
+}
+
+.breadcrumb-wrapper {
+  background: url("/images/bg-curly-dark.png"), linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("/images/breadcrumb_our_blog.png") center center no-repeat;
+  background-size: cover;
+}
+
+.footer {
+  --clr-background: #4f4137;
+  background: url("/images/bg-curly-dark.png"), linear-gradient(var(--clr-background), var(--clr-background));
+  background-size: cover;
+}
+
+@keyframes border-grow {
+  from {
+    transform: scaleX(0);
+  }
+
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.nav-link {
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-inline: 1rem;
+}
+
+.nav-link.nav-link-hover {
+  position: relative;
+  border-bottom: 1px solid transparent;
+}
+
+.nav-link.nav-link-hover::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--bs-primary);
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.nav-link.nav-link-hover:hover::after {
+  animation: border-grow 0.3s forwards;
+}
+
+.dropdown.dropstart {
+  position: relative !important;
+}
+
+.dropdown.dropstart .dropdown-menu {
+  position: absolute !important;
+  top: 200% !important;
+  right: 0;
+}
+
+.dropdown-toggle::before {
+  display: none !important;
+}
+
+.offcanvas {
+  max-width: 80%;
+}
+
+.btn:hover .fa-stack {
+  transform: scale(1.5);
+  transition: transform 0.2s ease;
+}
+
+@media (max-width: 992px) {
+  .navbar-brand {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+/* -----------------------------Your code goes here------------------------- */
+
+/* Pricing Page */
+
+.price {
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.quality {
+  cursor: pointer;
+}
+
+.quality:hover .fa-circle {
+  color: #3dd84d !important;
+}
+
+.quality:hover .ms-2 {
+  color: var(--bs-primary) !important;
+}
+
+/* FAQ Page */
+
+.accordion-button::after {
+  display: none;
+}
+
+/* unset box shadow and background color */
+.accordion-item {
+  border-bottom: none !important;
+}
+
+.accordion-button {
+  box-shadow: none !important;
+  background-color: transparent !important;
+}
+
+.accordion-button:focus {
+  box-shadow: none !important;
+}
+
+.accordion-button:focus .fa-circle {
+  color: var(--bs-primary) !important;
+}
+
+.accordion-button:focus p {
+  color: #000;
+}
+
+.accordion-item:has(> .show) .accordion-button .fa-circle {
+  color: var(--bs-primary) !important;
+}
+
+.accordion-item:has(> .show) .accordion-button p {
+  color: black !important;
+}
+
+a:hover {
+  color: var(--bs-primary) !important;
+}
+
+.faq-decor-1 {
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.faq-decor-2 {
+  left: 0;
+  bottom: 5%;
+}
